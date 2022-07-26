@@ -15,12 +15,15 @@ window.addEventListener('load', function() {
     
         let titleInput = document.querySelector("input[name=title]");
         let title = titleInput.value;
+        let titleCheck = Number(title); // should be NaN
 
         let authorInput = document.querySelector("input[name=author]");
         let author = authorInput.value;
+        let authorCheck = Number(author); // should be NaN
 
         let pagesInput = document.querySelector("input[name=numPages]");
         let pages = pagesInput.value;
+        let pagesCheck = Number(pages);
 
         let typeInput = document.querySelector("select[name=type]");
         let type = typeInput.value;
@@ -33,14 +36,18 @@ window.addEventListener('load', function() {
             }
         }
 
-        bookList.style.visibility = "visible";
-        bookTitle.innerHTML= `Title: ${title}`;
-        bookAuthor.innerHTML= `Author: ${author}`;
-        bookPages.innerHTML= `Num Pages: ${pages}`;
-        bookType.innerHTML= `Type: ${type}`;
-        bookStatus.innerHTML= `Status: ${status}`;
-
-        
+        if(title === '' || author === '' || pages === ''){
+            alert("All fields required");
+        } else if(isNaN(titleCheck) === false || isNaN(authorCheck) === false || isNaN(pagesCheck) === true){
+            alert("Make sure to enter valid information.")
+        }else {
+            bookList.style.visibility = "visible";
+            bookTitle.innerHTML= `Title: ${title}`;
+            bookAuthor.innerHTML= `Author: ${author}`;
+            bookPages.innerHTML= `Num Pages: ${pages}`;
+            bookType.innerHTML= `Type: ${type}`;
+            bookStatus.innerHTML= `Status: ${status}`;
+        }
     });
 
 });
