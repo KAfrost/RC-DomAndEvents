@@ -1,11 +1,12 @@
 <!doctype html>
 <head>
+    <title>Book Tracker</title>
     <script src = "script.js"></script>
-    <link rel = "stylesheet" type = "text/css" href = "styles.css" />
+    <link rel = "stylesheet" href = "styles.css" />
 </head>
 <body>
     <div id="BookForm">
-    <form id="addBook">
+    <form>
         <label> Title: 
             <input type="text" name="title"/>
         </label> 
@@ -14,37 +15,42 @@
             <input type="text" name="author"/>
         </label>
         <br> 
+        <label> Number of Pages: 
+            <input type="text" name="numPages"/>
+        </label>
+        <br>
         <label> Book Type: 
-            <select name = "bookType"> 
+            <select name = "type"> 
                 <option value=''>** Select One **</option>
-                <option value='fiction'>Fiction</option> 
-                <option value='nonFiction'>Non-Fiction</option>
-                <option value='biography'>Biography</option>
-                <option value='periodical'>Periodical</option>
-                <option value='reference'>Reference</option>
+                <option value='Fiction'>Fiction</option> 
+                <option value='Non-Fiction'>Non-Fiction</option>
+                <option value='Biography'>Biography</option>
+                <option value='Periodical'>Periodical</option>
+                <option value='Reference'>Reference</option>
             </select>
         </label>
         <br> 
         <label> Book Status: 
-            <label><input type= "radio" name="status" value='buy' required/>Buy</label>
-            <label><input type= "radio" name="status" value='read'/>Read</label>
-            <label><input type= "radio" name="status" value='unread'/>Unread</label>
+            <label><input type= "radio" name="status" value='Buy'/>Buy</label>
+            <label><input type= "radio" name="status" value='Read'/>Read</label>
+            <label><input type= "radio" name="status" value='Unread'/>Unread</label>
         </label>
         <br> 
-        <input type="submit" value="Add Book" />
+        <input type="submit" value="Add Book"/>
     </form>
-  
+  </div>
     <div id="displayBook">
         <h2>Books</h2>
         <div id="bookInfo">
         <ul>    
             <li id="bookTitle">Title</li>
-            <li id="bookauthor">Author</li>
+            <li id="bookAuthor">Author</li>
+            <li id="bookPages">Pages</li>
             <li id="bookType">Type</li>
             <li id="bookStatus">Status</li>
         </ul>
+        </div>
     </div>
-    </div>
-</div>
+
 </body>
 
