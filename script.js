@@ -6,10 +6,7 @@ window.addEventListener('load', function() {
 form.addEventListener("submit", function(event){
 
     let title = document.querySelector("input[name=title]")
-    alert(`${title} was entered.`)
-
-
-
+    alert(`${title.value} was entered.`)
 
 })
 

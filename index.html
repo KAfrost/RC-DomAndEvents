@@ -1,9 +1,10 @@
 <!doctype html>
 <head>
     <script src = "script.js"></script>
+    <link rel = "stylesheet" type = "text/css" href = "styles.css" />
 </head>
 <body>
-    <div>
+    <div id="BookForm">
     <form id="addBook">
         <label> Title: 
             <input type="text" name="title"/>
@@ -32,9 +33,10 @@
         <br> 
         <input type="submit" value="Add Book" />
     </form>
-    </div>
+  
     <div id="displayBook">
         <h2>Books</h2>
+        <div id="bookInfo">
         <ul>    
             <li id="bookTitle">Title</li>
             <li id="bookauthor">Author</li>
@@ -42,4 +44,7 @@
             <li id="bookStatus">Status</li>
         </ul>
     </div>
+    </div>
+</div>
 </body>
+

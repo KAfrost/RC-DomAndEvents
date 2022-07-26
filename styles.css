@@ -1,0 +1,20 @@
+body{
+    background-color: rgb(233, 219, 199);
+}
+h2 {
+    text-align: center;
+    padding-top: 25px;
+    color: darkblue;
+}
+
+div {
+    text-align: left;
+}
+#bookInfo{
+    text-align: center;
+    visibility: hidden;
+}
+#BookForm{ 
+    text-align: center;
+    padding-top: 50px;
+}
