@@ -36,7 +36,8 @@ window.addEventListener('load', function() {
             }
         }
 
-        if(title === '' || author === '' || pages === ''){
+        if (!title || !author || ! pages){
+        //if(title === '' || author === '' || pages === ''){
             alert("All fields required");
         } else if(isNaN(titleCheck) === false || isNaN(authorCheck) === false || isNaN(pagesCheck) === true){
             alert("Make sure to enter valid information.")
@@ -49,7 +50,6 @@ window.addEventListener('load', function() {
             bookStatus.innerHTML= `Status: ${status}`;
         }
     });
-
 });
 
 
