@@ -1,0 +1,45 @@
+<!doctype html>
+<head>
+    <script src = "script.js"></script>
+</head>
+<body>
+    <div>
+    <form id="addBook">
+        <label> Title: 
+            <input type="text" name="title"/>
+        </label> 
+        <br>    
+        <label>Author:  
+            <input type="text" name="author"/>
+        </label>
+        <br> 
+        <label> Book Type: 
+            <select name = "bookType"> 
+                <option value=''>** Select One **</option>
+                <option value='fiction'>Fiction</option> 
+                <option value='nonFiction'>Non-Fiction</option>
+                <option value='biography'>Biography</option>
+                <option value='periodical'>Periodical</option>
+                <option value='reference'>Reference</option>
+            </select>
+        </label>
+        <br> 
+        <label> Book Status: 
+            <label><input type= "radio" name="status" value='buy' required/>Buy</label>
+            <label><input type= "radio" name="status" value='read'/>Read</label>
+            <label><input type= "radio" name="status" value='unread'/>Unread</label>
+        </label>
+        <br> 
+        <input type="submit" value="Add Book" />
+    </form>
+    </div>
+    <div id="displayBook">
+        <h2>Books</h2>
+        <ul>    
+            <li id="bookTitle">Title</li>
+            <li id="bookauthor">Author</li>
+            <li id="bookType">Type</li>
+            <li id="bookStatus">Status</li>
+        </ul>
+    </div>
+</body>
